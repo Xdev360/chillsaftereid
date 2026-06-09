@@ -71,8 +71,8 @@ addEventListener('resize', applyFan);
 applyFan();
 px();
 
-function openEdition(id) {
-  location.href = 'edition.html?ed=' + encodeURIComponent(id);
+function openEditions(ed) {
+  location.href = 'editions.html?ed=' + encodeURIComponent(ed);
 }
 
 let price = 6500, name = 'Single', qty = 1;
@@ -105,4 +105,6 @@ function subscribe() {
   e.value = '';
 }
 document.getElementById('nemail').addEventListener('keydown', ev => { if (ev.key === 'Enter') subscribe(); });
-addEventListener('keydown', e => { if (e.key === 'Escape') document.body.classList.remove('m-open'); });
+addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.body.classList.remove('m-open');
+});

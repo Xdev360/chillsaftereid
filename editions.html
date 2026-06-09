@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>ChillsAfterEid — Editions Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="editions.css">
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <button class="back" id="backBtn" onclick="goBack()" style="visibility:hidden" aria-label="Go back">
+      <svg class="ic" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="ttl" id="topTitle">ChillsAfterEid</div>
+  </div>
+
+  <div class="view on" id="v-home">
+    <div class="home-pad">
+      <div class="sec-hd"><div class="eb">Once Eid is over</div><h2>The day the community <em>comes alive</em></h2><p>Tap a category to browse its photos across every edition.</p></div>
+      <div class="acards" id="homeActs"></div>
+      <div class="divider"></div>
+      <div class="sec-hd"><div class="eb">The track record</div><h2>Past editions</h2><p>Tap a folder to open its profile.</p></div>
+      <div class="folders" id="homeFolders"></div>
+    </div>
+  </div>
+
+  <div class="view" id="v-profile"></div>
+  <div class="view" id="v-activity"></div>
+  <div class="view" id="v-photos"></div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-x" onclick="closeLb()" aria-label="Close">
+    <svg class="ic" style="width:18px;height:18px;stroke:#fff" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="lb-img" id="lbImg"></div>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<script src="editions.js"></script>
+</body>
+</html>
